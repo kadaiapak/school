@@ -1,3 +1,4 @@
+<?php $loginType = $this->session->userdata('login_type'); ?>
 <?php include 'css.php'; ?>
 
 <body>
@@ -10,14 +11,12 @@
        <?php include 'header.php'; ?>
        <?php include $loginType.'/navigation.php'; ?>
         <!-- Left navbar-header -->
-        <?php include 'navigation.php'; ?>
         <!-- Left navbar-header end -->
         <!-- Page Content -->
         <div id="page-wrapper">
             <div class="container-fluid">
                <?php include 'page_info.php'; ?>
                <?php include $loginType.'/'.$page_name.'.php'; ?>
-               <?php include 'dashboard.php'; ?>
                 <!-- .right-sidebar -->
                 <?php include 'rightbar.php'; ?>
                 <!-- /.right-sidebar -->
@@ -26,7 +25,7 @@
             <?php include 'footer.php' ?>
         </div>
         <!-- /#page-wrapper -->
-    </div>
+    </div> 
     <!-- /#wrapper -->
     <!-- jQuery -->
     <?php include 'js.php'; ?>
